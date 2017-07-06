@@ -37,6 +37,7 @@ header("Creation-Date: Wed, 24 May 2017 12:00:00 GMT/n");
 
 <article>
 <?php
+
 // get the DarkSky forecast
 include 'darksky.php';
 
@@ -44,33 +45,31 @@ include 'darksky.php';
 
 $foreCast = json_decode(file_get_contents('./dkSky.json'),true);
 
+//Set the timezone 
 date_default_timezone_set($foreCast['timezone']);
 
-//print_r($foreCast);
-//print_r($foreCast['currently']);
-//  current conditions
 
 echo "<div class=now>";
 
 $date=date_create();
 date_timestamp_set($date,($foreCast['currently']['time']));
-echo(date_format($date,"l d F H:i:s")) . "<br>"; 
+echo(date_format($date,"l d F g:i a T")) . "<br>"; 
 
 echo ($foreCast['currently']['summary']);
 $curTemp=round($foreCast['currently']['temperature'],0,PHP_ROUND_HALF_UP);
-echo(" ") . "$curTemp" . "&deg" . "<br>";
-
+echo "<br>" . "Currently: " . "$curTemp" . "&deg" . "<br>";
+echo "High today: " . round($foreCast['daily']['data'][0]['temperatureMax'],0,PHP_ROUND_HALF_UP);
+echo "&deg" . "<br>";
 echo "Wind " .  round($foreCast['currently']['windSpeed'],0,PHP_ROUND_HALF_UP) . " mph" ." from ";
-
 // a switch to get wind direction from bearing
 include 'wind.php';
-
+echo " gusting to " . round($foreCast['currently']['windGust'],0,PHP_ROUND_HALF_UP) . " mph" . "<br>";
 echo "UV Index " . ($foreCast['currently']['uvIndex']) . "<br>";
-
 echo ($foreCast['daily']['summary']);
 
 echo "</div>";
 
+include 'weekly.php'; 
 ?>
 
 </article>

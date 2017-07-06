@@ -48,6 +48,6 @@ switch($windFrom)
  echo "N";
  break;
 }
-echo "<br>";
+//echo "<br>";
 ?>   
    

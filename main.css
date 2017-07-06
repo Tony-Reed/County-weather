@@ -1,0 +1,103 @@
+
+html>body {
+    font-size: 12px; }
+/* current font-size is 12px or 1em */
+
+/*
+html, body, article, footer, nav, p,img 
+{margin:0; padding:0; border:0; display:block;}
+*/
+
+body { margin: 0; padding: 10px; color: #000000 background-color: #ffffff;
+       font-family: Arial, FreeSans, "Nimbus Sans L", sans-serif;}
+h1 { font-size: 1.5em; text-align:center; padding:12px;}
+
+div.days {padding-bottom: 2px;}
+div.hours {padding-top: 10px;
+           padding-left: 20px;
+           padding-bottom: 20px;
+           text-align: center;}
+
+div.now { text-align:center; font-size: 1.5em; }
+span.strng {font-weight: bold;
+	color: #7B0000;}
+
+
+/*
+hyperlinks
+*/
+
+A         { color: #8f0000; text-decoration: none; font-size: 1em; 
+            font-family: Arial, FreeSans, "Nimbus Sans L", sans-serif; }
+
+A:visited { color: #af0000; text-decoration: none;	 
+	    font-size: 1em; font-family: Arial, FreeSans, "Nimbus Sans L", sans-serif; }
+
+A:hover   { color: #a4150f; text-decoration: none;
+            font-weight:bold; font-family: Arial, FreeSans, "Nimbus Sans L", sans-serif; }
+
+
+A.email   { color: #a4150f; font-size:1.2em; line-height:140%; }
+
+
+
+/*
+A { color: #000; text-decoration: none; font-size: 12px; 
+  font-family: verdana, sans-serif; letter-spacing: 0.2em; }
+
+A:visited { color: #000; text-decoration: none; letter-spacing: 0.2em;	 
+	  font-size: 12px; font-family: verdana, sans-serif; }
+
+A:hover { color: #8f0000; text-decoration: none; letter-spacing: 0.2em;
+        font-family: verdana, sans-serif; }
+
+div,figure,nav,figcaption,footer { text-align: left; 
+	font-family:verdana, sans-serif; 
+	font-size: 14px;
+        padding-left: 10px; }
+
+
+DIV.nav { background-color: #cfcfcf; padding-top: 8px;
+          padding-bottom: 8px; }
+
+
+A:link {color: #000000;
+       background: #cfcfcf;
+       text-decoration: none;
+       font-weight: bold;
+       font-size: 12px;   
+       font-family: verdana, helvetica, sans-serif;
+}
+	
+A:visited {color: #8F8F8F;
+	  background: #cfcfcf;
+	  text-decoration: none;
+	  font-weight: bold;
+	  font-size: 12px;   
+	  font-family: verdana, sans-serif;
+}
+
+
+A:hover {color: #8f0000;}
+
+A:active {color: #3333FF;}
+
+.top {text-indent: -10px;}
+
+.verse {text-indent: -15px;}
+
+.key {font: 12px monospace;}
+
+.frank {text-decoration: underline;}
+
+.all {background: #FFFFFF;
+     font-weight: normal;      
+     font-size: 12px;
+     font-family: verdana, helvetica, sans-serif;	
+     margin: 24pt;
+}
+
+
+*/
+
+

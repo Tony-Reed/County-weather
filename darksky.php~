@@ -35,7 +35,7 @@ $dkSky=$url . $key . "/" . $lat . "," . $lon . $exc .  $opt;
 // download the forecast
 $dkSky=file_get_contents($dkSky);
 
-// save it to work with
+// save it for jq to play with
 $fp=fopen("dkSky.json", "w");
 fwrite($fp, $dkSky);
 fclose($fp);

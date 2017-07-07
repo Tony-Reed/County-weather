@@ -5,7 +5,7 @@ header("Cache-Control: no-cache, must-revalidate"); // HTTP/1.1
 header("Last-Modified: " . gmdate("D, d M Y H:i:s") . " GMT");
 header("Expires: Fri, 22 Nov 1963 18:30:00 GMT\n"); // Date in the past
 header("Content-Transfer-Encoding: binary");
-header("Creation-Date: Wed, 24 May 2017 12:00:00 GMT/n");
+header("Creation-Date: Wed, 07 July 2017 12:00:00 GMT/n");
 ?>
 
 <!DOCTYPE html>
@@ -38,6 +38,8 @@ header("Creation-Date: Wed, 24 May 2017 12:00:00 GMT/n");
 <article>
 <?php
 
+ob_start();
+
 // get the DarkSky forecast
 include 'darksky.php';
 
@@ -47,7 +49,6 @@ $foreCast = json_decode(file_get_contents('./dkSky.json'),true);
 
 //Set the timezone 
 date_default_timezone_set($foreCast['timezone']);
-
 
 echo "<div class=now>";
 
@@ -70,6 +71,8 @@ echo ($foreCast['daily']['summary']);
 echo "</div>";
 
 include 'weekly.php'; 
+
+ob_flush();
 ?>
 
 </article>

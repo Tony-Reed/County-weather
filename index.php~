@@ -40,10 +40,10 @@ header("Creation-Date: Wed, 07 July 2017 12:00:00 GMT/n");
 
 ob_start();
 
-// get the DarkSky forecast (as a json object)
-require 'darksky.php';
+// get the DarkSky forecast
+include 'darksky.php';
 
-//Decode it to a multi-dimensional array
+//Decode it to a nice multi-dimensional array
 
 $foreCast = json_decode(file_get_contents('./dkSky.json'),true);
 
@@ -73,7 +73,7 @@ echo ($foreCast['daily']['summary']);
 
 echo "</div>";
 
-require 'weekly.php'; 
+include 'weekly.php'; 
 
 ob_flush();
 ?>

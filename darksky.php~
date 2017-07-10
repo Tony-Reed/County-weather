@@ -1,4 +1,12 @@
 <?php
+  /*
+mb_http_output('UTF-8'); 
+mb_internal_encoding('UTF-8');
+mb_http_output('UTF-8');
+mb_http_input('UTF-8');
+mb_language('uni');
+mb_regex_encoding('UTF-8');
+  */
 // lat & long lead to 23 Ferguson St., Picton, Ontario, Canada
 $lat=44.0044;
 $lon=-77.1453;
@@ -24,7 +32,7 @@ $dkSky=$url . $key . "/" . $lat . "," . $lon . $exc . $opt;
 //return true;
 */
 
-// download the forecast as json object
+// download the forecast
 $dkSky=file_get_contents($dkSky);
 
 // save it to work with

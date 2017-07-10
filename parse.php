@@ -1,13 +1,20 @@
 <?php
-// Read JSON file from Darksky
+
+
+
 $jsonDarkSky = file_get_contents('./dkSky.json');
 
 //Decode it to a nice multi-dimensional array
 $foreCast = json_decode($jsonDarkSky,true);
 date_default_timezone_set($foreCast['timezone']);
 
+
+
 //Print data
+include darksky.php;
 print_r($foreCast);
+print_r(get_headers('$dkSky'));
+
 
 
 /*

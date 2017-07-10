@@ -40,6 +40,8 @@ header("Creation-Date: Wed, 07 July 2017 12:00:00 GMT/n");
 
 ob_start();
 
+print_r(get_headers('$dkSky'));
+
 // get the DarkSky forecast (as a json object)
 require 'darksky.php';
 
